@@ -18,6 +18,11 @@ public Hoja(){
     this.datos = new String[0][0];
     this.nombre = "";
 }
+/**
+ * Crea una hoja nueva de tamaño nfilas por ncolumnas
+ * @param nFilas el numero de filas
+ * @param nColumnas el numero de celdas que tiene cada fila
+ */
 public Hoja(int nFilas, int nColumnas) {
         this.datos = new String[nFilas][nColumnas];
         this.nombre="";
