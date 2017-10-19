@@ -11,6 +11,9 @@ package com.iesvdc.acceso.excelapi.excelapi;
 public class Hoja {
     private String[][] datos;
     private String nombre;
+/**
+ * Crea una hoja de calculo nueva
+ */
 public Hoja(){
     this.datos = new String[0][0];
     this.nombre = "";
