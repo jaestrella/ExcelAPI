@@ -15,6 +15,7 @@ import java.io.IOException;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 
+
 /**
  *
  * @author juangu
@@ -30,13 +31,13 @@ public class HolaMundoExcel {
         
         Sheet sh = wb.createSheet("HOLA MUNDO");
         
-        for (int i = 0; i < 10; i++) {
-            Row row = sh.createRow(i);
-            for (int j = 0; j < 10; j++) {
-                Cell cell = row.createCell(j);
-                cell.setCellValue((char)('A'+j)+" "+(i+1));                
+            for (int i = 0; i < 10; i++) {
+                Row row = sh.createRow(i);
+                for (int j = 0; j < 10; j++) {
+                    Cell cell = row.createCell(j);
+                    cell.setCellValue((char)('A'+j)+" "+(i+1));                
+                }
             }
-        }
         
         try {
             FileOutputStream out = new FileOutputStream("holaMundoExcel.xlsx");
