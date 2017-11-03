@@ -1,4 +1,4 @@
-﻿
+
 package com.iesvdc.acceso.excelapi.excelapi;
 
 import java.io.File;
@@ -15,6 +15,7 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
  * Esta clase alacena información de libros para generar ficheros de Excel.
@@ -127,7 +128,7 @@ public class Libro {
                            }
 
                            System.out.println("Libro.load() = " + j + "k= " + k + " dato = " + dato);
-                           nuevaHoja.setDatos(dato,j,k);
+                           nuevaHoja.setDato(dato,j,k);
                        }
                    }
                    this.hojas.add(nuevaHoja);
@@ -148,12 +149,10 @@ public class Libro {
         }
     }
 
-
-    }
     
-    public void load(String filename){
+    public void load(String filename)throws ExcelAPIException{
         this.nombreArchivo=filename;
-        this.load();
+        //this.load();
     }
     
     public void save()throws ExcelAPIException{
@@ -177,6 +176,7 @@ public class Libro {
             wb.dispose();
         }      
     }
+    
     public void save(String filename)throws ExcelAPIException{
         this.nombreArchivo=filename;
         this.save();

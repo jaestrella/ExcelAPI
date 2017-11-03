@@ -69,7 +69,7 @@ public class LibroTest {
      * Test of addHoja method, of class Libro.
      */
     @Test
-    public void testAddHoja() {
+    public void testAddHoja() throws ExcelAPIException {
         System.out.println("addHoja");
         
         int filas=20, columnas=30;

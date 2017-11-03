@@ -1,6 +1,7 @@
-﻿/*
- */
+
 package com.iesvdc.acceso.excelapi.excelapi;
+
+import com.iesvdc.acceso.excelapi.excelapi.ExcelAPIException;
 
 /**
  * Esta clase almacena información del texto de
@@ -41,7 +42,7 @@ public Hoja(){
         this.nColumnas=nColumnas;
     }
 
-    public String getDato(int fila, int columna) {
+    public String getDato(int fila, int columna) throws ExcelAPIException {
 	//TO-DO excepcion si accedemos a una posicion no valida
         if (fila > this.nFilas || columna > this.nColumnas || fila < 0 || columna < 0){
             throw new ExcelAPIException("Hoja:getDatos(): Posición no válida");
@@ -49,7 +50,7 @@ public Hoja(){
         return datos[fila][columna];
     }
 
-    public void setDato(String dato,int fila,int columna) {
+    public void setDato(String dato,int fila,int columna) throws ExcelAPIException {
         //TO-DO excepcion si accedemos a una posicion no valida
 	if (fila > this.nFilas || columna > this.nColumnas || fila < 0 || columna < 0){
             throw new ExcelAPIException("Hoja:setDatos(): Posición no válida");
@@ -74,7 +75,7 @@ public Hoja(){
         return nColumnas;
     }
 
-    public boolean compare(Hoja hoja){
+    public boolean compare(Hoja hoja) throws ExcelAPIException{
         boolean iguales=true;
         if(this.nColumnas==hoja.getColumnas() 
                 && this.nFilas==hoja.getFilas() 
