@@ -9,25 +9,25 @@ No necesitamos procesar fórmulas. Se trata de una API de importación/exportaci
 Para la puntuación, y como completar la tarea mira la rúbrica.
 
 Calidad del Software:	
-Usar patrones, cerrar los flujos en las clausulas finally
-Usar patrones y buenas prácticas. P.ej. cerrar ficheros en la claúsula finally o usar try-with resources
+Usar patrones, cerrar los flujos en las clausulas finally.
+Usar patrones y buenas prácticas. P.ej. cerrar ficheros en la claúsula finally o usar try-with resources.
 
 Gestión Excepciones:	
-Tratar excepciones que generan las clases que usas
-La API genera sus propias excepciones
+Tratar excepciones que generan las clases que usas.
+La API genera sus propias excepciones.
 
 Apache POI:	
-La cargas, lees y guardas Excel XML de manera correcta
+La cargas, lees y guardas Excel XML de manera correcta.
 
 Documentación API:	
-Documentar todos los métodos públicos de la API
+Documentar todos los métodos públicos de la API.
 
 Tecnología desarrollo:	
-Usar el IDE
-Crear un pom.xml para usar maven 
+Usar el IDE.
+Crear un pom.xml para usar maven. 
 
 Herramientas colaborativas:	
-Subir el proyecto a un repositorio y añadir documentación (como mínimo Readme.md)
+Subir el proyecto a un repositorio y añadir documentación (como mínimo Readme.md).
 
 Pruebas API	:
-Usar jUnit
+Usar jUnit.
