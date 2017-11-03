@@ -85,21 +85,21 @@ public class Libro {
             for (int i = 0; i < libro.getNumberOfSheets(); i++){
                Sheet hoja = libro.getSheetAt(i);
 
-               int numFilas = hoja.getLastRowNum()+1;
-               int numColumnas = 0;
+               int nFilas = hoja.getLastRowNum()+1;
+               int nColumnas = 0;
 
                for (int j = 0; j < hoja.getLastRowNum(); j++){
                    Row fila = hoja.getRow(j);
 
-                   if (numColumnas < fila.getLastCellNum()){
-                       numColumnas = fila.getLastCellNum();
+                   if (nColumnas < fila.getLastCellNum()){
+                       nColumnas = fila.getLastCellNum();
                    }
                }
 
                System.out.println("Libro.load():: dataSheet=" + hoja.getSheetName());
-               Hoja nuevaHoja = new Hoja(hoja.getSheetName(), numFilas, numColumnas);
+               Hoja nuevaHoja = new Hoja(hoja.getSheetName(), nFilas, nColumnas);
 
-               for (int j = 0; j < numFilas; j++){
+               for (int j = 0; j < nFilas; j++){
                    Row fila = hoja.getRow(j);
                    for (int k = 0; k < fila.getLastCellNum(); k++){
                        Cell celda = fila.getCell(k);
