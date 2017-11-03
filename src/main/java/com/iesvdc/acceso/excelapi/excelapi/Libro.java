@@ -150,7 +150,7 @@ public class Libro {
     }
 
     
-    public void load(String filename)throws ExcelAPIException{
+    public void load(String filename) throws ExcelAPIException{
         this.nombreArchivo=filename;
         //this.load();
     }

@@ -117,7 +117,7 @@ public class LibroTest {
      * Test of load method, of class Libro.
      */
     @Test
-    public void testLoad_0args() throws ExcelAPIException{
+    public void testLoad_0args() throws ExcelAPIException {
        System.out.println("load");
        Libro instance = new Libro();
        instance.load("test.xlsx");
